@@ -39,9 +39,9 @@ function y = B3(z)
 	y= E(z) * sqrt(tan(i_0)^2 * (R_r / R + sqrt (1-E(z)^2) )^2 + 1 / (1- E(z)^2) );
 endfunction
 
-result_A1= quad("A1", z_1, z_2);
-result_A2= quad("A2", z_1, z_2);
-result_A3= quad("A3", z_1, z_2);
+result_A1= A1(z_2) - A1(z_1);
+result_A2= A2(z_2) - A2(z_1);
+result_A3= A3(z_2) - A3(z_1);
 result_B1= quad("B1", z_1, z_2);
 result_B2= quad("B2", z_1, z_2);
 result_B3= quad("B3", z_1, z_2);
