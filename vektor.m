@@ -6,7 +6,9 @@ dfx= [3.00  3.50  4.00  4.50  5.00  5.50  6.00  6.50  7.00]
 dfy= [4.00  4.50  5.00  5.50  6.00  6.50  7.00  7.50  8.00] 
 
 for q = 1:9
-  h=quiver(fx(q),fy(q),dfx(q),dfy(q), 0,'b');
+  h=quiver(fx(q)-dfx(q)/2,fy(q)-dfy(q)/2,dfx(q),dfy(q), 0,'b');
   hold on
   set (h, "maxheadsize", 0.1);
 endfor
+
+scatter(fx,fy);
